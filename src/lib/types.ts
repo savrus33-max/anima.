@@ -1,0 +1,20 @@
+export type Anime = {
+  id: number;
+  title: string;
+  original: string;
+  image: string;
+  score: number;
+  year: number;
+  genres: string[];
+  episodes: number;
+  aired: number;
+  status: string;
+  description: string;
+  color?: string;
+  trailer?: string;
+  badge?: string;
+};
+export type Profile = { id: string; name: string; email: string; avatar: string; accent: string; bio: string; createdAt: string };
+export type Room = { id: string; name: string; hostId: string; anime: Anime; isPrivate: boolean; playing: boolean; position: number; episode: number; updatedAt: string; createdAt: string; members: number; host?: string };
+export type RoomMember = { id: string; name: string; avatar: string };
+export type ChatMessage = { id: string; content: string; createdAt: string; name: string; avatar: string };
